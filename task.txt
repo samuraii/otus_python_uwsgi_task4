@@ -1,0 +1,17 @@
+Дока: https://uwsgi-docs.readthedocs.io/en/latest/WSGIquickstart.html
+
+Написать свой wsgi веб-фреймворк.
+За основу взять пример выше. 
+
+```python
+def application(env, start_response):
+    start_response('200 OK', [('Content-Type','text/html')])
+    return [b"Hello World"]
+```
+
+Добавить:
+- парсинг запроса, 
+- обработку роутинга, 
+- проброс запроса во view, 
+- генерацию ответа, 
+- проброс её наружу.
